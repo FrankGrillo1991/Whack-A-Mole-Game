@@ -40,4 +40,11 @@ function drawHangman(errors) {
     if (errors > 9) ctx.fillRect(132, 125, 10, 2);
 }
 
+function displayWord() {
+    wordEl.innerHTML = selectedWord
+        .split('')
+        .map(letter => (correctLetters.includes(letter) ? letter : '_'))
+        .join(' ');
+}
+
 
