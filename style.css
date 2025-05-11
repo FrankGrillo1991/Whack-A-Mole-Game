@@ -6,3 +6,9 @@ body {
     padding: 20px;
 }
 
+#word {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    margin: 20px;
+}
+
