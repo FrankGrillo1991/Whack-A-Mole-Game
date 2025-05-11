@@ -31,3 +31,20 @@ canvas {
     background-color: #fff;
 }
 
+#popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px #000;
+}
+
+#popup button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
