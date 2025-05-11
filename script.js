@@ -75,7 +75,6 @@ window.addEventListener('keydown', e => {
         const letter = e.key;
         if (selectedWord.includes(letter)) {
             if (!correctLetters.includes(letter)) {
-
             correctLetters.push(letter);
             displayWord();
             checkWin();
@@ -87,7 +86,7 @@ window.addEventListener('keydown', e => {
             wrongLetters.push(letter);
             updateWrongLetters();
         } else {
-            showNotification()
+            showNotification();
         }
     }
 }
