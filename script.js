@@ -47,4 +47,12 @@ function displayWord() {
         .join(' ');
 }
 
+function updateWrongLetters() {
+    wrongLetterEl.innerText = wrongLetters.join(' ');
+    drawHangman(wrongLetters.length);
 
+    if (wrongLetters.length >= 10) {
+        messageEl.innerText = 'You lost';
+        popup.classList.remove('hidden');
+    }
+}
