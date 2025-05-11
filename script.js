@@ -7,4 +7,9 @@ const playButton = document.getElementById('play-button');
 const canvas = document.getElementById('hangman');
 const ctx = canvas.getContext('2d');
 
+const words = ['javascript', 'hangman', 'vscode', 'openai', 'developer'];
+let selectedWord = words[Math.floor(Math.random() * words.length)];
+let correctLetters = [];
+let wrongLetters = [];
+
 
