@@ -56,3 +56,8 @@ function updateWrongLetters() {
         popup.classList.remove('hidden');
     }
 }
+
+function showNotification() {
+    notification.classList.remove('hidden');
+    setTimeout(() => notification.classList.add('hidden'), 2000);
+}
