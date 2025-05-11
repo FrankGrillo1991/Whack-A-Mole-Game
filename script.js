@@ -70,4 +70,37 @@ function checkWin() {
     }
 }
 
+window.addEventListener('keydown', e => {
+    if (e.key >= 'a' && e.key <= 'z') {
+        const letter = e.key;
+        if (selectedWord.includes(letter)) {
+            if (!correctLetters.includes(letter)) {
+
+            correctLetters.push(letter);
+            displayWord();
+            checkWin();
+        } else {
+            showNotification();
+        }
+    } else {
+        if (!wrongLetters.includes(letter)) {
+            wrongLetters.push(letter);
+            updateWrongLetters();
+        } else {
+            showNotification()
+        }
+    }
+}
+});
+
+playButton.addEventListener('click', () => {
+    correctLetters = [];
+    wrongLetters = [];
+    selectedWord = words[Math.floor(Math.random() * words.length)];
+    displayWord();
+    updateWrongLetters();
+    popup.classList.add('hidden');
+});
+
+displayWord();
 
