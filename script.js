@@ -61,3 +61,13 @@ function showNotification() {
     notification.classList.remove('hidden');
     setTimeout(() => notification.classList.add('hidden'), 2000);
 }
+
+function checkWin() {
+    const word = selectedWord.split('').every(letter => correctLetters.includes(letter));
+    if (word) {
+        messageEl.innerText = 'Congratulation! You won!';
+        popup.classList.remove('hidden');
+    }
+}
+
+
